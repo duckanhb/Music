@@ -1,16 +1,11 @@
-package adapter;
+package rikkei.musicplayer.adapter;
 
 import android.support.v4.app.Fragment;
 import android.support.v4.app.FragmentManager;
 import android.support.v4.app.FragmentPagerAdapter;
-
-import tab.AlbumsTab;
-import tab.ArtistsTab;
-import tab.SongTab;
-
-/**
- * Created by DUC on 11/09/2017.
- */
+import rikkei.musicplayer.tab.FragmentAlbum;
+import rikkei.musicplayer.tab.FragmentArtist;
+import rikkei.musicplayer.tab.FragmentSong;
 
 public class SectionsPagerAdapter extends FragmentPagerAdapter {
     public SectionsPagerAdapter(FragmentManager fm) {
@@ -21,14 +16,14 @@ public class SectionsPagerAdapter extends FragmentPagerAdapter {
     public Fragment getItem(int position) {
         switch (position) {
             case 0:
-                SongTab songTab = new SongTab();
-                return songTab;
+                FragmentSong fragmentSong = new FragmentSong();
+                return fragmentSong;
             case 1:
-                AlbumsTab albumsTab = new AlbumsTab();
-                return albumsTab;
+                FragmentAlbum fragmentAlbum = new FragmentAlbum();
+                return fragmentAlbum;
             case 2:
-                ArtistsTab artistsTab = new ArtistsTab();
-                return artistsTab;
+                FragmentArtist fragmentArtist = new FragmentArtist();
+                return fragmentArtist;
         }
         return null;
     }

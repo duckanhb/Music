@@ -6,17 +6,15 @@
     android:paddingLeft="@dimen/activity_horizontal_margin"
     android:paddingRight="@dimen/activity_horizontal_margin"
     android:paddingTop="@dimen/activity_vertical_margin"
-    tools:context="rikkei.musicplayer.Main2Activity$PlaceholderFragment">
+    android:background="@color/colorBackground">
 
-    <GridView
-        android:id="@+id/gridartists_tab"
+    <ListView
+        android:id="@+id/listsong_tab"
         android:layout_width="match_parent"
         android:layout_height="match_parent"
-        android:columnWidth="90dp"
-        android:numColumns="2"
-        android:verticalSpacing="90dp"
-        android:horizontalSpacing="10dp"
-        android:stretchMode="columnWidth"
-        android:gravity="center"/>
+        android:divider="@color/colorBackground"
+        android:dividerHeight="0.1px"
+        android:footerDividersEnabled="true"
+        android:headerDividersEnabled="false"/>
 
 </RelativeLayout>
